@@ -28,16 +28,17 @@
                         <div>{this.state.first}곱하기{this.state.second}는?</div>
                         <form onSubmit={(e) => {
                             e.preventDefault();
+                            const rst = this.state.first + ' * ' + this.state.second + ' = ' + this.state.value
                             if(parseInt(this.state.value) === this.state.first * this.state.second) {
                                 this.setState({
-                                    result: '정답',
+                                    result: rst + ' 정답',
                                     first: Math.ceil(Math.random() * 9),
                                     second: Math.ceil(Math.random() * 9),
-                                    value: '',
+                                    value: '', 
                                 });
                             } else {
                                 this.setState({
-                                    result: '땡',
+                                    result: rst + ' 땡',
                                     value: '',
                                 });
                             }
@@ -53,7 +54,7 @@
         }
     </script>
     <script type="text/babel">
-        ReactDOM.render(<GuGuDan />, document.querySelector('#root'));
+        ReactDOM.render(<div><GuGuDan /><GuGuDan /><GuGuDan /> </div>, document.querySelector('#root'));
     </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --env development"
+    "dev": "webpack serve --env development"
   },
   "author": "jung",
   "license": "MIT",
